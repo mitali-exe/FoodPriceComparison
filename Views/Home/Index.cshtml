@@ -1,0 +1,77 @@
+﻿@{
+    var username = Context.Session.GetString("Username");
+    ViewData["Title"] = "Home";
+}
+
+<div class="container mt-5 text-center">
+    <h1 class="fw-bold mb-2">🍔 Welcome to FoodCompare!</h1>
+    <p class="lead mb-5">Compare food delivery prices across Swiggy, Zomato, UberEats & more.</p>
+
+    @if (!string.IsNullOrEmpty(username))
+    {
+        <div class="mb-5">
+            <p class="mb-4">Hello, <b>@username</b> 👋 Ready to save money?</p>
+            <a class="btn btn-success btn-lg" asp-controller="PriceCompare" asp-action="Index">
+                Start Comparing
+            </a>
+        </div>
+    }
+    else
+    {
+        <div class="d-flex justify-content-center gap-3 mb-5">
+            <a href="/Account/Login" class="btn btn-primary btn-lg shadow" style="width:150px;">Login</a>
+            <a href="/Account/Signup" class="btn btn-outline-success btn-lg shadow" style="width:150px;">Signup</a>
+        </div>
+    }
+
+    <!-- Food Cards Section -->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+            <div class="card h-100 shadow-sm food-card">
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=400&h=300&fit=crop" class="card-img-top" alt="Pizza">
+                <div class="card-body">
+                    <h5 class="card-title">Pizza Deals</h5>
+                    <p class="card-text">Find the cheapest pizza across platforms 🍕</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 shadow-sm food-card">
+                <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&h=300&fit=crop" class="card-img-top" alt="Burger">
+                <div class="card-body">
+                    <h5 class="card-title">Burger Bonanza</h5>
+                    <p class="card-text">Compare burger prices instantly 🍔</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 shadow-sm food-card">
+                <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?w=400&h=300&fit=crop" class="card-img-top" alt="Food">
+                <div class="card-body">
+                    <h5 class="card-title">All Foods</h5>
+                    <p class="card-text">Save on your favorite dishes 🍜</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Hover Effects -->
+<style>
+    .food-card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        border-radius: 15px;
+    }
+
+        .food-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .food-card img {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+</style>
