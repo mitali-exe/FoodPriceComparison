@@ -230,3 +230,4 @@ C:\Users\sriva\source\repos\FoodPriceComparison\FoodPriceComparison\obj\Debug\ne
 C:\Users\sriva\source\repos\FoodPriceComparison\FoodPriceComparison\obj\Debug\net9.0\FoodPriceComparison.genruntimeconfig.cache
 C:\Users\sriva\source\repos\FoodPriceComparison\FoodPriceComparison\obj\Debug\net9.0\ref\FoodPriceComparison.dll
 C:\Users\sriva\source\repos\FoodPriceComparison\FoodPriceComparison\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\Users\sriva\source\repos\FoodPriceComparison\FoodPriceComparison\obj\Debug\net9.0\FoodPriceComparison.sourcelink.json
