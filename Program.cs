@@ -1,6 +1,7 @@
 using FoodPriceComparison.Data;
 //using FoodPriceComparison.Services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

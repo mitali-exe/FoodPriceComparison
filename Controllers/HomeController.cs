@@ -6,6 +6,7 @@ namespace FoodPriceComparison.Controllers
     [Authorize]
     public class HomeController : Controller
     {
+       
         public IActionResult Index()
         {
             return View(); // Renders Views/Home/Index.cshtml

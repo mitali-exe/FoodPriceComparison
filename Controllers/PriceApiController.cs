@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace FoodPriceComparison.Controllers
 {
-    //[Authorize(AuthenticationSchemes = "Bearer")] // If using JWT
+   
     [ApiController]
     [Route("api/[controller]")]
     public class PriceApiController : ControllerBase

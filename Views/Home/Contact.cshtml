@@ -21,19 +21,27 @@
                             <p><i class="bi bi-clock-fill text-primary"></i> Mon-Fri: 9AM-6PM IST</p>
                         </div>
                         <div class="col-md-6" data-aos="fade-left">
-                            <form>
+
+                            <form onsubmit="return generateMailto()">
                                 <div class="mb-3">
-                                    <label for="name" class="form-label">Name</label>
-                                    <input type="text" class="form-control hover-glow" id="name" placeholder="Your Name">
+                                    <label for="contactName" class="form-label">Name</label>
+                                    <input type="text" class="form-control hover-glow" id="contactName" placeholder="Your Name" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control hover-glow" id="email" placeholder="your@email.com">
+                                    <label for="contactEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control hover-glow" id="contactEmail" placeholder="your@email.com" required>
                                 </div>
+
                                 <div class="mb-3">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control hover-glow" id="message" rows="4" placeholder="Your message..."></textarea>
+                                    <label for="contactSubject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control hover-glow" id="contactSubject" placeholder="Regarding..." required>
                                 </div>
+
+                                <div class="mb-3">
+                                    <label for="contactMessage" class="form-label">Message</label>
+                                    <textarea class="form-control hover-glow" id="contactMessage" rows="4" placeholder="Your message..." required></textarea>
+                                </div>
+
                                 <button type="submit" class="btn btn-info w-100 hover-lift">Send Message</button>
                             </form>
                         </div>
@@ -43,3 +51,27 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        function generateMailto() {
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const subject = document.getElementById('contactSubject').value;
+            const message = document.getElementById('contactMessage').value;
+
+            const recipientEmail = "celok10455@bipochub.com";
+
+            const emailBody = `Sender Name: ${name}\nSender Email: ${email}\n\n---\n\nMessage:\n${message}`;
+
+            const encodedSubject = encodeURIComponent(`[Website Contact] ${subject}`);
+            const encodedBody = encodeURIComponent(emailBody);
+
+            const mailtoLink = `mailto:${recipientEmail}?subject=${encodedSubject}&body=${encodedBody}`;
+
+            window.location.href = mailtoLink;
+
+            return false;
+        }
+    </script>
+}

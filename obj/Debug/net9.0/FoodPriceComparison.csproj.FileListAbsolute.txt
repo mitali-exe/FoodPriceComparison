@@ -257,3 +257,6 @@ C:\Users\sriva\source\repos\FoodPriceComparison\FoodPriceComparison\bin\Debug\ne
 C:\Users\sriva\source\repos\FoodPriceComparison\FoodPriceComparison\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\sriva\source\repos\FoodPriceComparison\FoodPriceComparison\obj\Debug\net9.0\compressed\dlkygu5a1a-uwf7gbaxtv.gz
 C:\Users\sriva\source\repos\FoodPriceComparison\FoodPriceComparison\obj\Debug\net9.0\compressed\kttd6uvs3m-m0zbf4zq3g.gz
+C:\Users\sriva\source\repos\FoodPriceComparison\FoodPriceComparison\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+C:\Users\sriva\source\repos\FoodPriceComparison\FoodPriceComparison\bin\Debug\net9.0\MailKit.dll
+C:\Users\sriva\source\repos\FoodPriceComparison\FoodPriceComparison\bin\Debug\net9.0\MimeKit.dll
